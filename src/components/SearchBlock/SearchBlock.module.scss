@@ -1,0 +1,94 @@
+.wrapper {
+	height: 90px;
+	background-color: rgb(43, 42, 44);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1800px;
+}
+
+.search_block {
+	height: 54px;
+	outline: 4px solid rgb(1, 113, 199);
+	border-radius: 10px;
+	background-color: #fff;
+	display: flex;
+	align-items: center;
+}
+.form_search {
+	display: flex;
+	flex-direction: row;
+}
+.search_input {
+	min-width: 230px;
+	outline: none;
+	border: none;
+	font-size: 15px;
+}
+.search_svg {
+	padding: 15px 10px;
+	height: 20px;
+	width: 20px;
+	opacity: 0.4;
+}
+.method_input {
+	width: 130px;
+	min-width: 130px;
+	border: none;
+	outline: none;
+	font-size: 15px;
+}
+.filter_svg {
+	padding: 15px 10px;
+	height: 20px;
+	width: 20px;
+	opacity: 0.4;
+}
+.period_input {
+	width: 270px;
+	min-width: 270px;
+	border: none;
+	outline: none;
+	font-size: 15px;
+}
+.calendar_svg {
+	padding: 15px 10px;
+	height: 20px;
+	width: 20px;
+	opacity: 0.4;
+}
+.location_input {
+	width: 250px;
+	min-width: 250px;
+	border: none;
+	outline: none;
+	font-size: 15px;
+}
+.location_svg {
+	padding: 15px 10px;
+	height: 20px;
+	width: 20px;
+	outline: none;
+	border: none;
+	opacity: 0.4;
+}
+.submit_button {
+	border-radius: 0 10px 10px 0;
+	background-color: rgb(1, 113, 199);
+	border: none;
+	height: 55px;
+	min-width: 100px;
+	color: #fff;
+	margin-right: -2px;
+	font-weight: 500;
+}
+.separator {
+	padding-top: 5px;
+	margin-right: 10px;
+	font-size: 25px;
+	font-weight: 100;
+	opacity: 0.5;
+}
+::placeholder {
+	opacity: 0.7;
+}

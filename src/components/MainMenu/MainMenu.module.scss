@@ -1,0 +1,213 @@
+.main_menu {
+	display: flex;
+	flex-direction: column;
+	width: 300px;
+	min-width: 300px;
+}
+.map_svg {
+	margin-left: 10px;
+	height: 15px;
+	width: 15px;
+}
+.view_list {
+	display: flex;
+	flex-direction: row;
+	padding-top: 20px;
+	justify-content: center;
+	background-color: rgb(227, 239, 249);
+	height: 60px;
+}
+.button_vew_list {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-size: 14px;
+	font-weight: 700;
+	height: 40px;
+	width: 200px;
+	color: white;
+	border-radius: 25px;
+	background-color: rgb(1, 113, 199);
+	justify-content: center;
+}
+
+.all_categories {
+	position: relative;
+	font-weight: 800;
+	width: 320px;
+	background-color: #fff;
+	text-align: left;
+	height: 40px;
+	color: rgb(1, 113, 199);
+	svg {
+		padding-top: 5px;
+	}
+
+	span {
+		padding-left: 10px;
+	}
+}
+.left_arrow_svg2 {
+	position: absolute;
+	left: 300px;
+	top: 5px;
+	height: 20px;
+	width: 20px;
+}
+.left_arrow_svg {
+	height: 20px;
+	width: 20px;
+}
+.menu_categories {
+	text-align: left;
+	color: rgb(171, 170, 170);
+	font-weight: 800;
+	font-size: 17px;
+	margin-top: -17px;
+
+	li {
+		list-style-type: none;
+	}
+}
+.all_list {
+	position: relative;
+	color: rgb(1, 113, 199);
+	font-weight: 800;
+	font-size: 17px;
+	text-align: left;
+
+	svg {
+		position: absolute;
+		margin-left: 120px;
+		top: 3px;
+	}
+
+	span {
+		font-size: 18px;
+		color: rgb(171, 170, 170);
+		margin-left: 10px;
+	}
+	li {
+		margin-top: 5px;
+		list-style-type: none;
+		margin-left: -30px;
+	}
+}
+.down_arrow_svg {
+	height: 20px;
+	width: 20px;
+}
+
+.more {
+	text-align: left;
+	margin-left: 10px;
+	color: rgb(1, 113, 199);
+	font-weight: 600;
+	font-size: 16px;
+
+	svg {
+		margin-left: 5px;
+	}
+}
+
+.rent_price_filter {
+}
+
+.rent_price {
+}
+.discpition_filter {
+	text-align: left;
+	margin-top: 30px;
+	margin-left: 10px;
+	color: rgb(146, 143, 143);
+	font-weight: 800;
+	font-size: 16px;
+}
+.input_rent_filter {
+	margin-top: 30px;
+	display: flex;
+	justify-content: center;
+	height: 50px;
+
+	input {
+		margin: 0px 20px 0 20px;
+		background-color: rgb(238, 244, 249);
+		outline: none;
+		border-radius: 5px;
+		border: none;
+		width: 100px;
+		height: 40px;
+		text-align: center;
+		overflow: hidden;
+	}
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.separator {
+	margin-top: -15px;
+	font-size: 50px;
+	font-weight: 100;
+	opacity: 0.5;
+}
+
+.point_of_issue {
+	text-align: left;
+	margin-top: 30px;
+	margin-left: 10px;
+	color: rgb(142, 142, 142);
+	font-weight: 800;
+	font-size: 16px;
+}
+
+.checkbox {
+	margin-top: 20px;
+	span {
+		color: black;
+		font-weight: 700;
+		font-size: 18px;
+		margin-left: 20px;
+	}
+	input {
+		transform: scale(1.9);
+		opacity: 0.2;
+	}
+}
+
+.discription_rating {
+	margin-top: 15px;
+	font-weight: 800;
+	font-size: 17px;
+}
+
+.rating {
+	margin-top: 10px;
+}
+.rating_star {
+	width: 25px;
+	height: 25px;
+	color: white;
+	padding-left: 5px;
+}
+.rating_star:nth-child(1) {
+	color: rgb(255, 174, 0);
+}
+.rating_star:nth-child(2) {
+	color: rgb(255, 174, 0);
+}
+.rating_star:nth-child(3) {
+	color: rgb(255, 174, 0);
+}
+.rating_star:nth-child(4) {
+	color: rgb(255, 174, 0);
+}
+
+.votes {
+	font-size: 14px;
+	opacity: 0.4;
+	font-weight: 700;
+}

@@ -1,0 +1,19 @@
+.main_block {
+	display: flex;
+	flex-direction: row;
+	max-width: 1800px;
+}
+.ad_block {
+	height: 800px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	background: #eae8e8;
+	::-webkit-scrollbar {
+		display: none;
+	}
+}
+::-webkit-scrollbar {
+	display: none;
+}
+.ad_cart {
+}

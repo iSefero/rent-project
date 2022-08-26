@@ -1,25 +1,32 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import axios from 'axios';
+import { Routes, Route } from 'react-router-dom';
+
+import { setAd } from './redux/slices/adInfoSlice';
+
+import { useDispatch } from 'react-redux';
+
+import Home from './pages/Home';
+import ToRent from './pages/ToRent';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const dispatch = useDispatch();
+
+	React.useEffect(() => {
+		axios.get('http://localhost:3000/db.json').then((resp) => {
+			dispatch(setAd(resp.data.ad));
+		});
+	}, [setAd]);
+
+	return (
+		<div className="App">
+			<Routes>
+				<Route path="/" element={<Home />} />
+				<Route path="/torent" element={<ToRent />} />
+			</Routes>
+		</div>
+	);
 }
 
 export default App;
