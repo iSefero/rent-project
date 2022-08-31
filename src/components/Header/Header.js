@@ -33,7 +33,7 @@ function Header() {
 				</div>
 				<div className={styles.header_rent}>
 					<div className={styles.button}>
-						<Link to="torent">
+						<Link to="toRent">
 							<span className={styles.dicription_button}>
 								Здати в оренду
 								<svg

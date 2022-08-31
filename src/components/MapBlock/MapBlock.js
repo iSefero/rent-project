@@ -1,7 +1,10 @@
 import React from 'react';
 import { GoogleMap } from '@react-google-maps/api';
-import { Marker } from '@react-google-maps/api';
-import { useSelector } from 'react-redux';
+import { MarkerF } from '@react-google-maps/api';
+import { useDispatch, useSelector } from 'react-redux';
+
+import { setActiveAd } from '../../redux/slices/adInfoSlice';
+import blueCircle from '../../assets/svg/blue-circle.svg';
 
 import styles from './MapBlock.module.scss';
 
@@ -11,7 +14,9 @@ const center = {
 };
 
 function MapBlock() {
-	const markersPosition = useSelector((state) => state.ad.adInfo);
+	const dispatch = useDispatch();
+
+	const { adInfo } = useSelector((state) => state.ad);
 
 	const mapRef = React.useRef(undefined);
 
@@ -23,6 +28,10 @@ function MapBlock() {
 		mapRef.current = undefined;
 	}, []);
 
+	const onActiveAd = (id) => {
+		dispatch(setActiveAd(id));
+	};
+
 	return (
 		<GoogleMap
 			mapContainerClassName={styles.map}
@@ -30,13 +39,16 @@ function MapBlock() {
 			zoom={14}
 			onLoad={onLoad}
 			onUnmount={onUnmount}>
-			{markersPosition.map((obj, index) => (
-				<Marker
-					key={index}
-					position={{ lat: obj.lat, lng: obj.lng }}
-					icon={{ url: 'blue-circle.svg' }}
-				/>
-			))}
+			{adInfo?.map((obj, index) => {
+				return (
+					<MarkerF
+						onClick={() => onActiveAd(obj.id)}
+						key={index}
+						position={{ lat: obj.lat, lng: obj.lng }}
+						icon={blueCircle}
+					/>
+				);
+			})}
 		</GoogleMap>
 	);
 }

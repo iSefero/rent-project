@@ -14,16 +14,16 @@ function App() {
 	const dispatch = useDispatch();
 
 	React.useEffect(() => {
-		axios.get('http://localhost:3000/db.json').then((resp) => {
-			dispatch(setAd(resp.data.ad));
+		axios.get('https://630f7dc23792563418911561.mockapi.io/rent').then((resp) => {
+			dispatch(setAd(resp.data));
 		});
-	}, [setAd]);
+	}, []);
 
 	return (
 		<div className="App">
 			<Routes>
 				<Route path="/" element={<Home />} />
-				<Route path="/torent" element={<ToRent />} />
+				<Route path="/toRent" element={<ToRent />} />
 			</Routes>
 		</div>
 	);

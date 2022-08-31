@@ -11,6 +11,7 @@ const initialState = {
 			lng: 0,
 		},
 	],
+	activeAd: null,
 };
 
 const adSlice = createSlice({
@@ -20,9 +21,12 @@ const adSlice = createSlice({
 		setAd(state, action) {
 			state.adInfo = action.payload;
 		},
+		setActiveAd(state, action) {
+			state.activeAd = action.payload;
+		},
 	},
 });
 
-export const { setAd } = adSlice.actions;
+export const { setAd, setActiveAd } = adSlice.actions;
 
 export default adSlice.reducer;
